@@ -1,0 +1,48 @@
+.datadisplay {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width:100%;
+    font-weight: 10;
+    font-color:white;
+    margin: 0 auto;
+    background-color: lightgray;
+    
+}
+
+.datadisplay td, .datadisplay th {
+    border: .2em solid lightblue;
+    padding: 1em;
+}
+
+.datadisplay td{text-align: center;}
+
+.datadisplay tr:hover {background-color: lightblue;}
+
+.datadisplay th {
+    padding-top: .6em;
+    padding-bottom: .6em;
+    text-align: center;
+   
+    color: white;
+}
+
+h2.headertext {
+  text-align: center;
+  margin: 2% 25% 2% 25%;
+}}
+
+.datadisplay tr.headings {font-weight:bold;background-color: red;}
+
+h2.season2015 {text-align: center;margin: 2% 25% 2% 25%;font-weight:bold;}
+
+h2.season2016 {text-align: center;margin: 4% 25% 2% 25%;font-weight:bold;}
+
+h2.matchview {text-align: center;margin: 3%;font-weight:bold;}
+
+.matchpager {text-align: center;margin: 2% 15% 2% 10%;font-weight:bold;}
+
+
+.yeardata {margin: 2% 30% 2% 20%;font-weight:bold;}
+
+.Teamstats{     margin: 0% 95% 2%;font-weight:bold
+}

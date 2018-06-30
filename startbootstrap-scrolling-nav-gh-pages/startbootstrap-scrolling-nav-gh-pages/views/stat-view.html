@@ -1,0 +1,103 @@
+<div class="row" >
+            <div class="statviewtable">
+                
+                <h2 class="season2015">English Premiur Leaque Team Stats</h2>
+                
+                <div class="yeardata">
+                Year: <select ng-model="selectedseason" ng-options="item for item in myMatch.year"><option value="">All</option></select>
+                
+                </div>
+                <div class="round2015" ng-hide='selectedseason === "2016/17"'>
+
+                    <h2 class="season2015">{{myMatch.season2015}}</h2>
+                   
+                   <table align="center" class="datadisplay" >
+                    <thead class="headings">
+                        <tr>
+                        <td>Club</td>
+                        <td>Played</td>
+                        <td>Won</td>
+                        <td>Drawn</td>
+                        <td>Lost</td>
+                        <td>GoalFor</td>
+                        <td>GoalAgainst</td>
+                        <td>GD</td>
+                        <td>Points</td>         
+                        
+                    </tr>
+
+                </thead>
+                 <tbody>
+                
+                    <tr ng-repeat="mat in myMatch.finalarray[0]|myfilter|orderBy:'points':true">
+                        <td>{{mat.team}}</td>
+                        <td>{{mat.won+mat.lost+mat.drawn}}</td>
+                        <td>{{mat.won}}</td>
+                        <td>{{mat.drawn}}</td>
+                        <td>{{mat.lost}}</td>
+                        <td>{{mat.goalfor}}</td>
+                        <td>{{mat.goalagainst}}</td>
+                        <td>{{mat.gd}}</td>
+                        <td>{{mat.points}}</td>
+
+                  
+                    </tr>
+                       
+                </tbody>
+
+                </table>
+            
+              </div>
+
+              <div class="round2016" ng-hide='selectedseason === "2015/16"'>
+
+                    <h2 class="season2016">{{myMatch.season2016}}</h2>
+                   
+                   <table align="center" class="datadisplay" >
+                    <thead class="headings">
+                        <tr>
+                        <td>Club</td>
+                        <td>Played</td>
+                        <td>Won</td>
+                        <td>Drawn</td>
+                        <td>Lost</td>
+                        <td>GoalFor</td>
+                        <td>GoalAgainst</td>
+                        <td>GD</td>
+                        <td>Points</td>         
+                        
+                    </tr>
+
+                </thead>
+                 <tbody>
+                
+                    <tr ng-repeat="mat in myMatch.finalarray[1]|myfilter|orderBy:'points':true">
+                        <td>{{mat.team}}</td>
+                        <td>{{mat.won+mat.lost+mat.drawn}}</td>
+                        <td>{{mat.won}}</td>
+                        <td>{{mat.drawn}}</td>
+                        <td>{{mat.lost}}</td>
+                        <td>{{mat.goalfor}}</td>
+                        <td>{{mat.goalagainst}}</td>
+                        <td>{{mat.gd}}</td>
+                        <td>{{mat.points}}</td>
+
+                  
+                    </tr>
+                       
+                </tbody>
+
+                </table>
+            
+              </div>
+             
+                <!-- Pager -->
+                <ul class="matchpager">
+                    <li class="next">
+                        <a href="#/">Back to Home &rarr;</a>
+                        
+                          
+                    </li>
+                </ul>
+            </div>
+</div>

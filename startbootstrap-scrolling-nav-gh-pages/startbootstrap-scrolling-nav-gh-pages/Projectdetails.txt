@@ -1,0 +1,17 @@
+Urls of my api - 
+
+base url - https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.json
+           https://raw.githubusercontent.com/openfootball/football.json/master/2016-17/en.1.json
+
+Views:
+index.html---Main html file
+index-view.html--views for displaying all match details
+match-view.html---View to display for individual match
+stat-view.html---View to display stats details for all team seasonwise
+
+	
+
+
+Java Script File:
+app.js: for Controller and and functions to calulate stats and filter function for filteration .
+Route.js for routing to different views.

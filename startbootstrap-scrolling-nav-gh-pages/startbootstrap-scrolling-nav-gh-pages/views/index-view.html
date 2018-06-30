@@ -1,0 +1,84 @@
+<div class="row">
+
+
+            
+            <div class="Data">
+
+                <div class="yeardata">
+                Year: <select ng-model="selectedyear" ng-options="item for item in myMatch.year"><option value="">All</option></select>
+                Club: <select ng-model="selectedclub" ng-options="club for club in myMatch.club"><option value="">All</option></select>
+                Score: <select ng-model="selectedresult" ng-options="score for score in myMatch.result"><option value="">All</option></select>
+                </div>
+                <a class="Teamstats" href="#!/stats/">TeamStats</a>
+
+                
+
+                
+            	<div class="round2015" ng-hide='selectedyear === "2016/17"'>
+            	<h2 class="season2015">{{myMatch.season2015}}</h2>
+
+            	<table align="center" class="datadisplay">
+            		<thead class="headings">
+                        <tr>
+            			<td>Home Team</td>
+            			<td>Final Score</td>
+            			<td>Away Team</td>
+                        
+                    </tr>
+
+            	</thead>
+                 <tbody ng-repeat="round in myMatch.match2015">
+            		<tr ng-repeat="mat in round.matches| search | filter : (!!selectedclub || undefined) && {$:selectedclub}| filter : (!!selectedresult || undefined) && {$:selectedresult}">
+            		
+                     <td><a style="display: block;" data-ng-href="#!/2015/{{$parent.$index}}/{{$index}}"  >{{mat.team1.name}}({{mat.team1.code}})</a> </td>
+                  	<td><a style="display: block;" data-ng-href="#!/2015/{{$parent.$index}}/{{$index}}"   >{{mat.score1}}-{{mat.score2}}</a> </td>	 
+                  	<td><a style="display: block;" data-ng-href="#!/2015/{{$parent.$index}}/{{$index}}"  >{{mat.team2.name}}({{mat.team2.code}})</a> </td>
+                   
+                    
+                  
+                    </tr>
+                </tbody>
+
+            	</table>
+                </div>
+
+
+               
+                
+                
+                <div class="round2016" ng-hide='selectedyear === "2015/16"'>
+                <h2 class="season2016">{{myMatch.season2016}}</h2>
+
+                <table align="center" class="datadisplay" >
+                    <thead class="headings">
+                        <tr>
+                        <td>Home Team</td>
+                        <td>Final Score</td>
+                        <td>Away Team</td>
+                        
+                    </tr>
+
+                </thead>
+                <tbody ng-repeat="round in myMatch.match2016">
+                    <tr ng-repeat="mat in round.matches|search | filter : (!!selectedclub || undefined) && {$:selectedclub}| filter : (!!selectedresult || undefined) && {$:selectedresult}">
+                 
+                     <td><a style="display: block;" ng-href="#!/2016/{{$parent.$index}}/{{$index}}">{{mat.team1.name}}({{mat.team1.code}})</a></td>
+                    <td><a style="display: block;" ng-href="#!/2016/{{$parent.$index}}/{{$index}}">{{mat.score1}}-{{mat.score2}}</a></td>   
+                    <td><a style="display: block;" ng-href="#!/2016/{{$parent.$index}}/{{$index}}">{{mat.team2.name}}({{mat.team2.code}}) </a></td>
+                    
+               
+                    </tr>
+                </tbody>
+
+
+                </table>
+                </div>
+                
+                
+              
+             
+                <!-- Pager -->
+
+                
+            </div>
+</div>

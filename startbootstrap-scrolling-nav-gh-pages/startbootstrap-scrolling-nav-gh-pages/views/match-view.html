@@ -1,0 +1,78 @@
+<div class="row" >
+            <div class="matchviewtable">
+                
+                
+
+                <div class="round2015" ng-if='myMatch.matchyear === "2015"'>
+                   
+                   <table align="center" class="datadisplay" >
+                    <thead class="headings">
+                        <tr>
+                        <td>Home Team</td>
+                        <td>Final Score</td>
+                        <td>Away Team</td>
+                        <td>Date</td>
+                        <td>Round</td>
+                        
+                        
+                    </tr>
+
+                </thead>
+                 <tbody>
+                    <tr>
+                        <h2 class="matchview">{{myMatch.season2015}}</h2>
+                    <td>{{myMatch.match2015[myMatch.roundindex].matches[myMatch.matchindex].team1.name}}({{myMatch.match2015[myMatch.roundindex].matches[myMatch.matchindex].team1.code}})</td>
+                    <td>{{myMatch.match2015[myMatch.roundindex].matches[myMatch.matchindex].score1}}-{{myMatch.match2015[myMatch.roundindex].matches[myMatch.matchindex].score2}}</td>  
+                    <td>{{myMatch.match2015[myMatch.roundindex].matches[myMatch.matchindex].team2.name}}({{myMatch.match2015[myMatch.roundindex].matches[myMatch.matchindex].team2.code}}) </td>
+                    <td> {{myMatch.match2015[myMatch.roundindex].matches[myMatch.matchindex].date}} </td>
+                    <td>{{myMatch.match2015[myMatch.roundindex].name}}</td>
+                  
+                    </tr>
+                </tbody>
+
+                </table>
+            </div>
+
+                <div class="round2016" ng-if='myMatch.matchyear === "2016"'>
+                <table align="center" class="datadisplay" >
+                    <thead class="headings">
+                        <tr>
+                        <td>Home Team</td>
+                        <td>Final Score</td>
+                        <td>Away Team</td>
+                        <td>Date</td>
+                        <td>Round</td>
+                        
+                        
+                    </tr>
+
+                </thead>
+                 <tbody ">
+                    <tr ">
+                        <h2 class="matchview">{{myMatch.season2016}}</h2>
+                    <td>{{myMatch.match2016[myMatch.roundindex].matches[myMatch.matchindex].team1.name}}({{myMatch.match2016[myMatch.roundindex].matches[myMatch.matchindex].team1.code}})</td>
+                    <td>{{myMatch.match2016[myMatch.roundindex].matches[myMatch.matchindex].score1}}-{{myMatch.match2016[myMatch.roundindex].matches[myMatch.matchindex].score2}}</td>  
+                    <td>{{myMatch.match2016[myMatch.roundindex].matches[myMatch.matchindex].team2.name}}({{myMatch.match2016[myMatch.roundindex].matches[myMatch.matchindex].team2.code}}) </td>
+                    <td> {{myMatch.match2016[myMatch.roundindex].matches[myMatch.matchindex].date}} </td>
+                    <td>{{myMatch.match2016[myMatch.roundindex].name}}</td>
+                  
+                    </tr>
+                </tbody>
+
+                </table>
+                    
+                </div>
+                
+                
+              
+             
+                <!-- Pager -->
+                <ul class="matchpager">
+                    <li class="next">
+                        <a href="#/">Back to Home &rarr;</a>
+                        
+                          
+                    </li>
+                </ul>
+            </div>
+</div>
